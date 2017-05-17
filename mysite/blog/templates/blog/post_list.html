@@ -4,11 +4,12 @@
     </head>
     <body>
         <h1 style="text-align : center">LTech</h1>
-        <h2>
-            <h3>Ford CTO Raj Nair on the future: Ford will look very different in ten years</h3>
-            <p>Today at TechCrunch Disrupt NY, our own Darrell Etherington sat down with Ford Motor Company CTO (and Ford emplopyee since 1987!) Raj Nair to chat about the future and how a company like Ford shifts with an evolving industry — particularly as the car industry adopts the idea of cars that drive themselves.</p>
-            <h3>HelloAva launches a chatbot for personalized skin care recommendations</h3>
-            <p> Can a chatbot replace a dermatologist’s recommendation for skin care products? That’s the idea behind HelloAva, a startup launching today at TechCrunch Disrupt NY, which aims to walk people through a series of questions to determine their skin type, then make recommendations as to which products to buy.</p>
-        </h2>        
+        <h2>Posts</h2>
+            {%for post in posts%}
+                <h3>{{post}}</h3>
+                <p>{{ post.published_date }}</p>
+                <p>{{post.text}}</p>
+            {%endfor%}
+        </ul>
     </body>
 </html>
